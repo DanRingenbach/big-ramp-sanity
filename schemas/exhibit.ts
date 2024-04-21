@@ -31,6 +31,24 @@ const exhibit = {
             description: "Write a brief description about this show",
         },
         {
+          title: 'Opening Date',
+          name: 'openingDate',
+          type: 'date',
+          options: {
+            dateFormat: 'dddd, MMMM Do YYYY',
+            calendarTodayLabel: 'Today'
+          }
+        },
+        {
+          title: 'Closing Date',
+          name: 'closingDate',
+          type: 'date',
+          options: {
+            dateFormat: 'dddd, MMMM Do YYYY',
+            calendarTodayLabel: 'Today'
+          }
+        },
+        {
             name: "pressRelease",
             title: "Upload Press Release",
             type: "file",

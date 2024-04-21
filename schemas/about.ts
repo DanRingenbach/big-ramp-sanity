@@ -10,7 +10,7 @@ const about = {
   icon: BiUser,
   fields: [
     defineField({
-      name: "galleryname",
+      name: "galleryName",
       title: "Gallery Name",
       type: "string",
       validation: (rule) => rule.required(),

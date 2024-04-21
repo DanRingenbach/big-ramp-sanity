@@ -9,12 +9,11 @@ import { ExhibitType } from "@/types";
 
 export default async function Job(){
     const job: ExhibitType[] = await getExhibitions();
-    const singleJob = job[Math.floor(Math.random() * job.length)]
+    const singleJob = job[0]
     const slides = singleJob.imageUrls
     return (
         <section className="">
-            <div className="h-2/4 flex justify-center">
-                <h1>{singleJob.name}</h1>
+            <div className="flex justify-center flex-col items-center">
                 <div key={singleJob._id} className="">
                     <div>
                         <Slider slides={slides} />

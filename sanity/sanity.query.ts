@@ -26,7 +26,9 @@ export async function getExhibitions() {
       name,
       artists,
       description,
-      pressRelease,
+      'pressRelease' : pressRelease.asset->url,
+      openingDate,
+      closingDate,
       'imageUrls' : imageArray[].asset->url,
       'slug': slug.current
     }`
@@ -40,7 +42,9 @@ export async function getSingleExhibit(slug: string) {
       name,
       artists,
       description,
-      pressRelease,
+      openingDate,
+      closingDate,
+      'pressRelease' : pressRelease.asset->url,
       'imageUrls' : imageArray[].asset->url,
     }`,
     { slug }

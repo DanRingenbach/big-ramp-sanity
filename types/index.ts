@@ -24,6 +24,8 @@ export type ExhibitType = {
   artists: string[];
   description: string;
   pressRelease: string;
+  openingDate: string;
+  closingDate: string;
   imageUrls: string[];
   slug: string;
  

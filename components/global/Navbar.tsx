@@ -25,7 +25,15 @@ export default function Navbar() {
                 href="/exhibitions"
                 className="hover:text-purple-400 duration-300"
               >
-                Work
+                Exhibitions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://big-ramp.beehiiv.com/subscribe"
+                className="hover:text-purple-400 duration-300"
+              >
+                Newsletter Signup
               </Link>
             </li>
             
