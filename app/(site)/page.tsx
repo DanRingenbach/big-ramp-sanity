@@ -16,8 +16,8 @@ export default async function Home() {
           <h1 className='text-2xl font-bold mb-8'>{singleJob.name}</h1>
           <h1 className='text-lg font-bold mb-8'>{singleJob.openingDate} {'->'} {singleJob.closingDate}</h1>
           <p className="text-lg mb-8">{singleJob.description}</p>
-          {singleJob.artists.map((artist) => (
-            <li>{artist}</li>
+          {singleJob.artists.map((artist, index) => (
+            <li key={index}>{artist}</li>
           ))}
 
 

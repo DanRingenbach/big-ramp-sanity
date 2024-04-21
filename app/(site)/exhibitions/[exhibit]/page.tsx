@@ -31,8 +31,8 @@ export default async function Exhibit({ params }: Props) {
                     <p className="lg:leading-tight mb-4">{exhibit.description}</p>
                 </div>
                 <div className="flex items-start justify-between mb-4">
-                    {exhibit.artists.map((artist) => (
-                        <p>{artist}</p>
+                    {exhibit.artists.map((artist, index) => (
+                        <p key={index}>{artist}</p>
                     ))}
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
