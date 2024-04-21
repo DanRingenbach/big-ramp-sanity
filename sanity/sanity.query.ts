@@ -21,12 +21,13 @@ export async function getAbout() {
 
 export async function getExhibitions() {
   return client.fetch(
-    groq`*[_type == "exhibit"]{
+    groq`*[_type == "exhibit"] | order(openingDate asc){
       _id,
       name,
       artists,
       description,
       'pressRelease' : pressRelease.asset->url,
+      opened,
       openingDate,
       closingDate,
       'imageUrls' : imageArray[].asset->url,

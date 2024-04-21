@@ -31,6 +31,11 @@ const exhibit = {
             description: "Write a brief description about this show",
         },
         {
+          title: 'Has the show opened yet?',
+          name: 'opened',
+          type: 'boolean'
+        },
+        {
           title: 'Opening Date',
           name: 'openingDate',
           type: 'date',
