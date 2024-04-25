@@ -2,36 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -43,4 +13,30 @@ body {
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-in-out;
+}
+
+.portableText {
+  @apply text-lg leading-relaxed;
+}
+
+.portableText p,
+.portableText ul,
+.portableText ol,
+.portableText blockquote {
+  @apply my-6;
+}
+
+.portableText h2 {
+  @apply mb-4 mt-12 text-3xl leading-snug;
+}
+
+.portableText h3 {
+  @apply mb-4 mt-8 text-2xl leading-snug;
+}
+
+.portableText a {
+  @apply text-blue-500 underline;
+}
+.portableText a:hover {
+  @apply text-blue-800;
 }

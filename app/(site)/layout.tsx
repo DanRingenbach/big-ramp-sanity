@@ -11,11 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 // export const metadata: Metadata = {
-//   title: "Sanity Next.js Portfolio Site",
-//   description: "A personal portfolio site built with Sanity and Next.js",
-//   openGraph: {
-//     images: "add-your-open-graph-image-url-here",
-//   },
+//   title: "Big Ramp Gallery",
+//   description: "A gallery in Kensington Philadelphia",
 // };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

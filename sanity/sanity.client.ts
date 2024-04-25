@@ -1,7 +1,6 @@
 // sanity/sanity.client.ts
 
 import { createClient, type ClientConfig } from "@sanity/client";
-import imageUrlBuilder from '@sanity/image-url'
 
 
 const config: ClientConfig = {

@@ -33,6 +33,14 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
+                  href="/posts"
+                  className="hover:text-purple-400 duration-300"
+                >
+                  News
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="https://big-ramp.beehiiv.com/subscribe"
                   className="hover:text-purple-400 duration-300"
                 >
@@ -80,6 +88,14 @@ export default function Navbar() {
                       className=" text-lg hover:text-purple-400 duration-300"
                     >
                       Exhibitions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/posts"
+                      className=" text-lg hover:text-purple-400 duration-300"
+                    >
+                      News
                     </Link>
                   </li>
                   <li>

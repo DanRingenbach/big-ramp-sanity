@@ -1,6 +1,6 @@
 // types/index.ts
 
-import { PortableTextBlock } from "sanity";
+import { PortableTextBlock, TypedObject } from "sanity";
 
 export type AboutType = {
   _id: string,
@@ -31,3 +31,13 @@ export type ExhibitType = {
   slug: string;
  
 };
+
+export type PostType = {
+  _id: string;
+  title: string;
+  slug: string;
+  content: TypedObject;
+  exerpt: string;
+  coverImageURL: string;
+  date: string;
+}

@@ -1,11 +1,11 @@
 // sanity/sanity.query.ts
 
 import { groq } from "next-sanity";
-import  client  from "./sanity.client";
+import client from "./sanity.client";
 
 export async function getAbout() {
-    return client.fetch(
-        groq`*[_type == "about"]{
+  return client.fetch(
+    groq`*[_type == "about"]{
           _id,
           galleryName,
           byline,
@@ -15,7 +15,7 @@ export async function getAbout() {
           missionStatement,
           socialLinks
         }`
-    );
+  );
 }
 
 
@@ -51,4 +51,34 @@ export async function getSingleExhibit(slug: string) {
     { slug }
   );
 }
+
+export async function getPosts() {
+  return client.fetch(
+    groq`*[_type == "post"] | order(date asc){
+      _id,
+      title,
+      'slug': slug.current,
+      content,
+      exerpt,      
+      'coverImageURL' : coverImage.asset->url,
+      date,
+    }`
+  );
+}
+
+export async function getPost(slug: string) {
+  return client.fetch(
+    groq`*[_type == "post" && slug.current == $slug][0]{
+      _id,
+      title,
+      'slug': slug.current,
+      content,
+      exerpt,      
+      'coverImageURL' : coverImage.asset->url,
+      date,
+    }`,
+    { slug }
+  );
+}
+
 
