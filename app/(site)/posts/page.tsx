@@ -17,7 +17,7 @@ export default async function Posts() {
 
             <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
                 {posts.map((post) => (
-                    <div>
+                    <div key={post._id}>
 
                         <Image src={post.coverImageURL} width={400} height={400} alt="Overlay" className="w-full lg:h-full md:h-full sm:h-auto" />
                         <Link

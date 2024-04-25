@@ -30,9 +30,9 @@ export const SanityImage = (props: Props) => {
 
   return (
     <figure className='flex flex-col items-center'>
-      <img
+      <Image
         src={imageProps.width(500).height(500).url()}
-      className='object-center'/>
+      className='object-center' alt={`${alt}`}/>
       {caption && (
         <figcaption className="mt-2 text-center italic text-sm text-gray-500 dark:text-gray-400 text-pretty">
           {caption}
