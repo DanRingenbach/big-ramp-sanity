@@ -20,7 +20,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     },
 }
 
-export default async function Post({ coverImageURL, content }: Props) {
+const Post = async({ coverImageURL, content }: Props) => {
 
     return (
         <main className="max-w-6xl mx-auto lg:px-16 px-8">
@@ -31,3 +31,7 @@ export default async function Post({ coverImageURL, content }: Props) {
         </main>
     );
 }
+
+export const revalidate = 60;
+
+export default Post;
