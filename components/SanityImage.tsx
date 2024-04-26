@@ -13,7 +13,6 @@ function urlFor(source: SanityImageSource) {
     return builder.image(source)
 }
 
-
 interface Props {
   asset: TypedObject
   alt: string

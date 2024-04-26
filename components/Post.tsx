@@ -1,26 +1,14 @@
 
 import Image from "next/image";
-import { getPost } from "@/sanity/sanity.query";
-import type { PostType } from "@/types";
 import { PortableText, type PortableTextReactComponents } from 'next-sanity'
 import styles from './Post.module.css'
 import { TypedObject } from "sanity";
 import { SanityImage } from "./SanityImage"
-import client from '../sanity/sanity.client'
-import imageUrlBuilder from '@sanity/image-url'
-
 
 type Props = {
     coverImageURL: string;
     content: TypedObject;
 };
-
-
-const builder = imageUrlBuilder(client)
-
-function urlFor(source: TypedObject) {
-    return builder.image(source)
-}
 
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
@@ -31,7 +19,6 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
         },
     },
 }
-
 
 export default async function Post({ coverImageURL, content }: Props) {
 

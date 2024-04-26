@@ -10,9 +10,7 @@ type Props = {
   }
 };
 
-export const revalidate = 60
-
-export async function SinglePost({ params }: Props ){
+export default async function SinglePost({ params }: Props ){
   const slug = params.post
   const post: PostType = await getPost(slug);
     return (
@@ -21,3 +19,4 @@ export async function SinglePost({ params }: Props ){
         </main>
     );
 }
+
