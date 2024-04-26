@@ -4,7 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
 export default defineConfig({
-  name: 'default',
+  name: 'big-ramp-sanity',
   title: 'Big Ramp',
 
   projectId: 'p2ep0njv',
