@@ -8,6 +8,7 @@ const config: ClientConfig = {
   dataset: "production",
   apiVersion: "2024-02-06",
   useCdn: false,
+  
 };
 
 
