@@ -10,7 +10,6 @@ import Footer from "../../components/global/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 
-
 // export const metadata: Metadata = {
 //   title: "Big Ramp Gallery",
 //   description: "A gallery in Kensington Philadelphia",

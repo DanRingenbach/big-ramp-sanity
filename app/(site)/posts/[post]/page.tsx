@@ -10,7 +10,7 @@ type Props = {
   }
 };
 
-export default async function SinglePost({ params }: Props ){
+const SinglePost = async({ params }: Props ) =>{
   const slug = params.post
   const post: PostType = await getPost(slug);
     return (
@@ -20,3 +20,6 @@ export default async function SinglePost({ params }: Props ){
     );
 }
 
+export const dynamic = "force-dynamic";
+
+export default SinglePost;
