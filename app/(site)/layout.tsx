@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ["latin"] });
 //   description: "A gallery in Kensington Philadelphia",
 // };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const isSanityStudio = pathname.startsWith('/studio');
   return (

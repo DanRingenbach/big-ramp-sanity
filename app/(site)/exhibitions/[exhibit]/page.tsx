@@ -1,7 +1,5 @@
 // app/exhibitions/[exhibit]/page.tsx
 
-import Image from "next/image";
-import { Metadata } from "next";
 import { getSingleExhibit } from "@/sanity/sanity.query";
 import type { ExhibitType } from "@/types";
 import ImageOverlay from "@/components/ImageOverlay";
