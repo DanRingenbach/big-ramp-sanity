@@ -63,12 +63,6 @@ const about = {
       description: "Add your social media links:",
       fields: [
         {
-          name: "twitter",
-          title: "Twitter URL",
-          type: "url",
-          initialValue: "https://twitter.com/",
-        },
-        {
           name: "facebook",
           title: "Facebook URL",
           type: "url",
