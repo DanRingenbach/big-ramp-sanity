@@ -8,10 +8,10 @@ import Link from 'next/link'
 
 export default async function Home() {
   const job: ExhibitType[] = await getExhibitions();
-  const singleJob = job[0]
+  const singleJob = job[job.length -1]
 
   const posts: PostType[] = await getPosts();
-  const singlePost = posts[0]
+  const singlePost = posts[posts.length -1]
 
   return (
     <main className="max-w-7xl mx-auto lg:px-16 px-6">
