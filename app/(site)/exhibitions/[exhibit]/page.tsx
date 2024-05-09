@@ -15,6 +15,7 @@ const Exhibit = async({ params }: Props) => {
     const slug = params.exhibit;
     const exhibit: ExhibitType = await getSingleExhibit(slug);
 
+
     return (
         <main className="max-w-6xl mx-auto lg:px-16 px-8">
             <div className="max-w-3xl mx-auto">
