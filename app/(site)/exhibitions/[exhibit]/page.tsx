@@ -11,7 +11,7 @@ type Props = {
 };
 
 
-export default async function Exhibit({ params }: Props) {
+const Exhibit = async({ params }: Props) => {
     const slug = params.exhibit;
     const exhibit: ExhibitType = await getSingleExhibit(slug);
 
@@ -42,3 +42,7 @@ export default async function Exhibit({ params }: Props) {
         </main>
     );
 }
+
+export const revalidate = 60;
+
+export default Exhibit
