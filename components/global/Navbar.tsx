@@ -41,7 +41,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href="https://big-ramp.beehiiv.com/subscribe"
+                  href="/newsletter"
                   className="hover:text-purple-400 duration-300"
                 >
                   Newsletter Signup
