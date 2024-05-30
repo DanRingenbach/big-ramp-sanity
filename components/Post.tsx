@@ -23,7 +23,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 const Post = async({ coverImageURL, content }: Props) => {
 
     return (
-        <main className="max-w-6xl mx-auto lg:px-16 px-8">
+        <main className="max-w-xl mx-auto lg:px-16 px-8 lg:grid-cols-2">
             <Image src={coverImageURL} width={400} height={400} alt="Overlay" className="w-full lg:h-full md:h-full sm:h-auto" />
             <div className={`max-w-3xl mx-auto ${styles.portableText}`}>
                 <PortableText value={content} components={myPortableTextComponents} />

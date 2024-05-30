@@ -40,4 +40,6 @@ export type PostType = {
   exerpt: string;
   coverImageURL: string;
   date: string;
+  imageUrls: string[];
+
 }

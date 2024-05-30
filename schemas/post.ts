@@ -1,5 +1,4 @@
 import { BookIcon } from '@sanity/icons'
-import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
 
@@ -21,6 +20,15 @@ export default defineType({
   icon: BookIcon,
   type: 'document',
   fields: [
+    {
+      name: "imageArray",
+      title: "Image Array",
+      type: "array",
+      description: "Image Array",
+      of: [{
+          type:'image'
+      }]
+  },
     defineField({
       name: 'title',
       title: 'Title',
@@ -111,7 +119,7 @@ export default defineType({
     defineField({
       name: 'date',
       title: 'Date',
-      type: 'datetime',
+      type: 'date',
       initialValue: () => new Date().toISOString(),
     }),
   ],

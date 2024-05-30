@@ -21,7 +21,7 @@ export async function getAbout() {
 
 export async function getExhibitions() {
   return client.fetch(
-    groq`*[_type == "exhibit"] | order(openingDate asc){
+    groq`*[_type == "exhibit"] | order(openingDate desc){
       _id,
       name,
       artists,
@@ -54,7 +54,7 @@ export async function getSingleExhibit(slug: string) {
 
 export async function getPosts() {
   return client.fetch(
-    groq`*[_type == "post"] | order(date asc){
+    groq`*[_type == "post"] | order(date desc){
       _id,
       title,
       'slug': slug.current,
@@ -62,6 +62,8 @@ export async function getPosts() {
       exerpt,      
       'coverImageURL' : coverImage.asset->url,
       date,
+      'imageUrls' : imageArray[].asset->url,
+
     }`
   );
 }
@@ -76,6 +78,8 @@ export async function getPost(slug: string) {
       exerpt,      
       'coverImageURL' : coverImage.asset->url,
       date,
+      'imageUrls' : imageArray[].asset->url,
+
     }`,
     { slug }
   );

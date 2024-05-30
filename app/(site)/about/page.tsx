@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getAbout } from "@/sanity/sanity.query";
 import type { AboutType } from "@/types";
 import { PortableText } from "@portabletext/react";
-import { BiEnvelope, BiFile, BiSolidBomb } from "react-icons/bi";
+import { BiEnvelope, BiSolidBomb } from "react-icons/bi";
 import Iframe from "react-iframe"
 
 export default async function About() {
@@ -17,24 +17,14 @@ export default async function About() {
     <main className="lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6 bg-white text-black">
       {profile && profile.map((data) => (
         <div key={data._id}>
-          <section className="grid lg:grid-cols-2 grid-cols-1 gap-x-6 justify-items-center">
+          <section className="grid lg:grid-cols-1 grid-cols-1 gap-x-6 justify-items-center">
 
-            <div className="flex flex-col lg:justify-self-center justify-self-start gap-y-8 order-none mb-12">
-              <div>
+            <div className="max-w-full">
+              <h1 className="lg:text-5xl text-4xl lg:leading-tight mb-5 font-bold">
+                {data.galleryName}
+              </h1>
 
-                <Image
-                  className="mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20]"
-                  src={data.profileImage.image}
-                  width={400}
-                  height={400}
-                  quality={100}
-                  alt={data.profileImage.alt}
-                />
-
-
-              </div>
-
-              <ul>
+              <ul className="mb-5">
                 <li>
                   <a
                     href={`mailto:${data.email}`}
@@ -61,18 +51,17 @@ export default async function About() {
                   ))}
 
               </ul>
-            </div>
-            <div className="max-w-full">
-              <h1 className="lg:text-5xl text-4xl lg:leading-tight mt-8 font-bold">
-                {data.galleryName}
-              </h1>
-
-              <div className="flex flex-col gap-y-3 text-zinc-400 leading-relaxed">
+              <div className="flex flex-col gap-y-3 leading-relaxed">
                 <PortableText value={data.bio} />
-                <Iframe
-                  url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.613806979828!2d-75.11143172453882!3d39.994734981216254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b7d527488d1f%3A0xe444d88bbbc07fe9!2s2024%20E%20Westmoreland%20St%2C%20Philadelphia%2C%20PA%2019134!5e0!3m2!1sen!2sus!4v1705536597800!5m2!1sen!2sus"
-                  width="450" height="450" allowFullScreen={true} loading="lazy" className="max-w-full"></Iframe>
-                <p className="mb-8">2024 East Westmoreland Street, Philadelphia, Pennsylvania 19134, United States</p>
+                <h1 className="lg:text-5xl text-4xl lg:leading-tight mt-8 font-bold">
+                  Location
+                </h1>
+                <p className="mb-5">2024 East Westmoreland Street, Philadelphia, Pennsylvania 19134, United States</p>
+                <div className="map flex flex-col items-center justify-center">
+                  <Iframe
+                    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.613806979828!2d-75.11143172453882!3d39.994734981216254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b7d527488d1f%3A0xe444d88bbbc07fe9!2s2024%20E%20Westmoreland%20St%2C%20Philadelphia%2C%20PA%2019134!5e0!3m2!1sen!2sus!4v1705536597800!5m2!1sen!2sus"
+                    width="450" height="450" allowFullScreen={true} loading="lazy" className="max-w-full ml-1/2 mr-1/2"></Iframe>
+                </div>
               </div>
             </div>
           </section>

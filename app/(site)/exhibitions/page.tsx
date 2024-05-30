@@ -14,21 +14,25 @@ export default async function Exhibit() {
         </h1>
       </section>
 
-      <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
+      <section className="grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10">
         {projects.map((project) => (
-          <Link
-            href={`/exhibitions/${project.slug}`}
-            key={project._id}
-            className="flex items-center gap-x-4 border border-transparent hover:border-zinc-700 ease-in-out"
-          >
-            
-            <div>
-              <h2 className="text-lg font-semibold mb-1">{project.name}</h2>
-              <h2 className='text-lg mb-5'>{project.openingDate} {'->'} {project.closingDate}</h2>
-              <h2 className="font-semibold mb-1">{project.description}</h2>
-            </div>
-            
-          </Link>
+          <div key={project._id} className="border-2 border-transparent hover:shadow-lg">
+
+            <Link
+              href={`/exhibitions/${project.slug}`}
+              key={project._id}
+              className="flex flex-col items-center justify-center ease-in-out"
+            >
+
+              <div>
+                <h2 className="text-lg font-semibold mb-1">{project.name}</h2>
+                <h2 className='text-lg mb-5'>{project.openingDate} {'->'} {project.closingDate}</h2>
+                <h2 className="font-semibold mb-1">{project.description}</h2>
+              </div>
+
+            </Link>
+          </div>
+
         ))}
       </section>
     </main>

@@ -9,7 +9,7 @@ import { ExhibitType } from "@/types";
 
 export default async function Job(){
     const job: ExhibitType[] = await getExhibitions();
-    const singleJob = job[job.length - 1]
+    const singleJob = job[0]
     const slides = singleJob.imageUrls
     return (
         <section className="">
